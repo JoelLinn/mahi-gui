@@ -261,7 +261,7 @@ void Application::run() {
         glfwGetWindowSize(m_window, &winWidth, &winHeight);
         float pxRatio = static_cast<float>(fbWidth) / static_cast<float>(winWidth);
         nvgBeginFrame(m_vg, static_cast<float>(winWidth), static_cast<float>(winHeight), pxRatio);
-        draw(m_vg);
+        // draw(m_vg);
         nvgEndFrame(m_vg);
         prof.t_nvg = prof_clk.restart();
 

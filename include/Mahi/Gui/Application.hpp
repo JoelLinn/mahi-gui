@@ -165,7 +165,9 @@ protected:
     /// Generic OpenGL drawing context, called immediately after update().
     virtual void draw() { /* nothing by default */ }
     /// NanoVG specific drawing context, called immediately after draw()
-    virtual void draw(NVGcontext* nvg) { /* nothing by default */ }
+    // Commented out to work around MSVC bug:
+    // https://developercommunity.visualstudio.com/content/problem/1036583/getting-address-of-inherited-member-function-publi.html
+    // virtual void draw(NVGcontext* nvg) { /* nothing by default */ }
 
 public:
     /// Emitted when the Window moves. Passes (x,y) window position pixels.
